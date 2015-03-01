@@ -28,12 +28,17 @@ module.exports = yeoman.generators.Base.extend({
       name: 'eventPage',
       message: 'Would you like to add an Event Page?',
       default: false
+    }, {
+      name: 'popup',
+      message: 'Would you like to add a popup menu?',
+      default: false
     }];
 
     this.prompt(prompts, function (props) {
       this.extName = props.extName;
       this.eventPage = props.eventPage;
       this.description = props.description;
+      this.popup = props.popup;
       done();
     }.bind(this));
   },
@@ -101,6 +106,17 @@ module.exports = yeoman.generators.Base.extend({
         this.fs.copy(
           this.templatePath('optional/eventPage.js'),
           this.destinationPath('app/eventPage.js')
+        );
+      }
+      if (this.popup) {
+        this.fs.copyTpl(
+          this.templatePath('optional/popup.html'),
+          this.destinationPath('app/popup.html'),
+          this
+        );
+        this.fs.copy(
+          this.templatePath('optional/popup.js'),
+          this.destinationPath('app/js/popup.js')
         );
       }
     }

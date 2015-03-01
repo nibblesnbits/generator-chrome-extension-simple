@@ -12,7 +12,8 @@ describe('chrome-extension-simple:app', function () {
       .withOptions({ 'skip-install': true })
       .withPrompt({
         extName: 'test-extension',
-        eventPage: true
+        eventPage: true,
+        popup: true
       })
       .on('end', done);
   });
@@ -46,7 +47,9 @@ describe('chrome-extension-simple:app', function () {
       'tasks/options/watch.js',
 
       // optional files
-      'app/eventPage.js'
+      'app/eventPage.js',
+      'app/popup.html',
+      'app/js/popup.js'
     ]);
   });
 });
