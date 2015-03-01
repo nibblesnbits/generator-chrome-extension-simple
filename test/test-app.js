@@ -11,7 +11,8 @@ describe('chrome-extension-simple:app', function () {
       .inDir(path.join(os.tmpdir(), './temp-test'))
       .withOptions({ 'skip-install': true })
       .withPrompt({
-        extName: 'test-extension'
+        extName: 'test-extension',
+        eventPage: true
       })
       .on('end', done);
   });
@@ -23,7 +24,6 @@ describe('chrome-extension-simple:app', function () {
       'bower.json',
       'gruntfile.js',
       'package.json',
-      'README.md',
       'app/img/icon_16.png',
       'app/img/icon_32.png',
       'app/img/icon_48.png',
@@ -43,7 +43,10 @@ describe('chrome-extension-simple:app', function () {
       'tasks/options/uglify.js',
       'tasks/options/updateDependencies.js',
       'tasks/options/updatePackage.js',
-      'tasks/options/watch.js'
+      'tasks/options/watch.js',
+
+      // optional files
+      'app/eventPage.js'
     ]);
   });
 });
