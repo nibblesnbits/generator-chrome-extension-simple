@@ -13,7 +13,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the world-class' + chalk.red('ChromeExtensionSimple') + ' generator!'
+      'Welcome to the world-class ' + chalk.red(' Simple Chrome Extension') + ' generator!'
     ));
 
     var prompts = [{
@@ -87,7 +87,7 @@ module.exports = yeoman.generators.Base.extend({
       // copy manifest template
       this.fs.copyTpl(
         this.templatePath('manifest.json'),
-        this.destinationPath('manifest.json'),
+        this.destinationPath('app/manifest.json'),
         this
       );
 
@@ -105,7 +105,7 @@ module.exports = yeoman.generators.Base.extend({
       if (this.eventPage) {
         this.fs.copy(
           this.templatePath('optional/eventPage.js'),
-          this.destinationPath('app/eventPage.js')
+          this.destinationPath('app/scripts/eventPage.js')
         );
       }
       if (this.popup) {
@@ -116,7 +116,7 @@ module.exports = yeoman.generators.Base.extend({
         );
         this.fs.copy(
           this.templatePath('optional/popup.js'),
-          this.destinationPath('app/js/popup.js')
+          this.destinationPath('app/scripts/popup.js')
         );
       }
     }

@@ -31,6 +31,7 @@ describe('chrome-extension-simple:app', function () {
       'app/img/icon_64.png',
       'app/img/icon_128.png',
       'app/libs/js/jquery.min.js',
+      'app/manifest.json',
       'app/scripts/main.js',
       'app/styles/main.less',
       'app/styles/vars.less',
@@ -47,9 +48,9 @@ describe('chrome-extension-simple:app', function () {
       'tasks/options/watch.js',
 
       // optional files
-      'app/eventPage.js',
       'app/popup.html',
-      'app/js/popup.js'
+      'app/scripts/eventPage.js',
+      'app/scripts/popup.js'
     ]);
   });
 });

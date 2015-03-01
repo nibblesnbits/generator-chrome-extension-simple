@@ -16,7 +16,7 @@
     ],
     <%if (eventPage) {%>
     "background": {
-		"scripts": ["eventPage.js"],
+		"scripts": ["js/eventPage.js"],
 		"persistent": false
   	},
     <%}%>
@@ -30,7 +30,7 @@
     "content_scripts": [
         {
             "matches": [
-                "http://www.example.com"
+                "http://www.example.com/*"
             ],
             "css": [
                 "css/main.min.css"
