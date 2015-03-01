@@ -1,45 +1,65 @@
-# generator-testgen [![Build Status](https://secure.travis-ci.org/wtfsven/generator-testgen.png?branch=master)](https://travis-ci.org/wtfsven/generator-testgen)
+# Simple Chrome Extension generator
 
-> [Yeoman](http://yeoman.io) generator
+Maintainer: [Stephen Collins](https://github.com/wtfsven)
 
+> Chrome Extension generator that creates everything you need to get started with extension development.
+Includes `grunt` tasks for easy generation of debug and release builds.
 
 ## Getting Started
 
-### What is Yeoman?
+- First make a new directory, and `cd` into it: mkdir my-new-chrome-extension && cd $_
+- Install the generator: `npm install -g generator-chrome-extension-simple`
+- Run: `yo chrome-extension-simple`
 
-Trick question. It's not a thing. It's this guy:
+Need more information about Chrome Extension? Please visit [Google Chrome Extension Develpment](http://developer.chrome.com/extensions/devguide.html)
 
-![](http://i.imgur.com/JHaAlBJ.png)
+## Generators
 
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
+Available generators:
 
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+* [chrome-extension-simple](#app) (aka [chrome-extension-simple:app](#app))
 
-```bash
-npm install -g yo
-```
+### App
 
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-testgen from npm, run:
+Sets up a new Chrome Extension, generating all the boilerplate you need to get started.
 
 ```bash
-npm install -g generator-testgen
+yo chrome-extension-simple
 ```
 
-Finally, initiate the generator:
+## Test Chrome Extension
+
+To test, go to: chrome://extensions, enable Developer mode and load app as an unpacked extension
+by selecting the `build` directory within your project.
+
+## Grunt tasks
+
+### Debug
+
+Debug task helps reduce your efforts during development.
 
 ```bash
-yo testgen
+grunt
+(or)
+grunt debug
 ```
 
-### Getting To Know Yeoman
+### Build
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+By default, generators compress the file that was created by building a js/css/html/resource file. You can distribute the compressed file using the Chrome Developer Dashboard to publish to the Chrome Web Store.
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+Run this command to build your Chrome Extension project.
+
+```bash
+grunt build
+```
+
+## Options
+
+* `--skip-install`
+
+  Skips the automatic execution of `bower` and `npm` after
+  scaffolding has finished.
 
 
 ## License
