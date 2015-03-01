@@ -1,4 +1,4 @@
-# Simple Chrome Extension generator
+# Simple Chrome Extension generator  [![Build Status](https://secure.travis-ci.org/wtfsven/generator-chrome-extension-simple.svg?branch=master)](http://travis-ci.org/wtfsven/generator-chrome-extension-simple)
 
 Maintainer: [Stephen Collins](https://github.com/wtfsven)
 
