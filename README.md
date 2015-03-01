@@ -7,7 +7,7 @@ Includes `grunt` tasks for easy generation of debug and release builds.
 
 ## Getting Started
 
-- First make a new directory, and `cd` into it: mkdir my-new-chrome-extension && cd $_
+- First make a new directory, and `cd` into it: `mkdir my-new-chrome-extension && cd $_`
 - Install the generator: `npm install -g generator-chrome-extension-simple`
 - Run: `yo chrome-extension-simple`
 
@@ -53,6 +53,9 @@ Run this command to build your Chrome Extension project.
 ```bash
 grunt build
 ```
+
+Grunt will automatically increment your [patch](http://semver.org/) version and create a new
+zip file for that version.
 
 ## Options
 
