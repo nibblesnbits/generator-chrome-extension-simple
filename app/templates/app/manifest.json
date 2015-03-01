@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "ChromeExtension",
+    "description": "My Chrome Extension",
+    "version": "0.0.1",
+    "icons": {
+        "16": "img/icon_16.png",
+        "32": "img/icon_32.png",
+        "48": "img/icon_48.png",
+        "64": "img/icon_64.png",
+        "128": "img/icon_128.png"
+    },
+    "permissions": [
+        "http://*.example.com/*",
+        "https://*.example.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.example.com"
+            ],
+            "css": [
+                "css/main.min.css"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "js/main.js"
+            ]
+        }
+    ] 
+}

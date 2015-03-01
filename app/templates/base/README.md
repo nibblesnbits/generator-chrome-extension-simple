@@ -1,0 +1,4 @@
+<%= extName %>
+===========
+
+My Chrome Extension

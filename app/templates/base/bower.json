@@ -1,0 +1,6 @@
+{
+  "name": "<%= extName %",
+  "devDependencies": {
+    "jquery": "~2.1.3"
+  }
+}
