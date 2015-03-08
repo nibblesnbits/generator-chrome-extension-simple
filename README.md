@@ -57,6 +57,25 @@ grunt build
 Grunt will automatically increment your [patch](http://semver.org/) version and create a new
 zip file for that version.
 
+## Bower Dependency Management
+
+In an effort to reduce distributable package size, this generator includes a `dependencies.json` configuration file.
+
+```javascript
+module.exports = {
+  build: {
+    options: {
+      dependencies: [{
+          "src": "bower/jquery/dist/jquery.min.js",
+          "dest": "app/libs/js/jquery.min.js"
+      }]
+    }
+  }
+}
+```
+
+The `dependencies` property contains an array of objects with `src` and `dest` properties.  `src` referrers to the relative path to a bower dependency, while `dest` specifies where to copy the file(s) during build.  jQuery has been included by default as an example.
+
 ## Options
 
 * `--skip-install`
