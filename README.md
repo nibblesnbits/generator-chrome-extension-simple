@@ -46,7 +46,7 @@ grunt debug
 
 ### Build
 
-By default, generators compress the file that was created by building a js/css/html/resource file. You can distribute the compressed file using the Chrome Developer Dashboard to publish to the Chrome Web Store.
+By default, generators compress the file that was created by building a js/css/html/resource file. You can distribute the compressed (`.zip`) file using the Chrome Developer Dashboard to publish to the Chrome Web Store.
 
 Run this command to build your Chrome Extension project.
 
@@ -54,8 +54,7 @@ Run this command to build your Chrome Extension project.
 grunt build
 ```
 
-Grunt will automatically increment your [patch](http://semver.org/) version and create a new
-zip file for that version.
+Grunt will automatically increment your [patch](http://semver.org/) version and create a new compressed file for that version.
 
 ## Bower Dependency Management
 
