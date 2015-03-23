@@ -5,10 +5,12 @@ var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
 var os = require('os');
 
-describe('chrome-extension-simple:app', function () {
+var tempdir = path.join(os.tmpdir(), './temp-test');
+
+describe('generator', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../app'))
-      .inDir(path.join(os.tmpdir(), './temp-test'))
+      .inDir(tempdir)
       .withOptions({ 'skip-install': true })
       .withPrompt({
         extName: 'test-extension',
