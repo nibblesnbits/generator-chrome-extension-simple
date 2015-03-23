@@ -1,6 +1,6 @@
 {
   "name": "generator-chrome-extension-simple",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator for Chrome Extension development",
   "license": "MIT",
   "main": "app/index.js",
@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/test-app.js"
   },
   "files": [
     "app"
@@ -25,7 +25,18 @@
   "dependencies": {
     "yeoman-generator": "^0.18.0",
     "chalk": "^0.5.0",
-    "yosay": "^0.3.0"
+    "yosay": "^0.3.0",
+		"clean-css": "^2.2.13",
+		"glob": "^4.0.5",
+		"grunt": "~0.4.1",
+		"grunt-contrib-clean": "^0.6.0",
+		"grunt-contrib-compass": "~0.6.0",
+		"grunt-contrib-compress": "^0.10.0",
+		"grunt-contrib-copy": "^0.5.0",
+		"grunt-contrib-htmlmin": "~0.2.0",
+		"grunt-contrib-less": "~0.11.0",
+		"grunt-contrib-uglify": "~0.4.0",
+		"load-grunt-tasks": "~0.2.0"
   },
   "devDependencies": {
     "mocha": "*"
