@@ -1,6 +1,6 @@
-# Simple Chrome Extension generator  [![Build Status](https://secure.travis-ci.org/wtfsven/generator-chrome-extension-simple.svg?branch=master)](http://travis-ci.org/wtfsven/generator-chrome-extension-simple)
+# Simple Chrome Extension generator  [![Build Status](https://secure.travis-ci.org/nibblesnbits/generator-chrome-extension-simple.svg?branch=master)](http://travis-ci.org/nibblesnbits/generator-chrome-extension-simple)
 
-Maintainer: [Stephen Collins](https://github.com/wtfsven)
+Maintainer: [Stephen Collins](https://github.com/nibblesnbits)
 
 > Chrome Extension generator that creates everything you need to get started with extension development.
 Includes `grunt` tasks for easy generation of debug and release builds.
